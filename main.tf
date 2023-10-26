@@ -5,13 +5,6 @@ terraform {
       version = ">= 2.4.1"
     }
   }
-
-  backend "azurerm" {
-    resource_group_name  = "workshop"
-    storage_account_name = "terraformworkshop2023"
-    container_name       = "state-backend"
-    key                  = "iuFIuuwHybzxmkP9ccyaObEB0K4jlPlyD+ruV0NKolQukPglfF7m/pIn8PIrdLUnpa9DXHq87E7J+AStvx9Rfw=="
-  }
 }
 
 provider "azurerm" {
