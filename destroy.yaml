@@ -1,0 +1,17 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: TerraformTaskV1@0
+    inputs:
+      provider: "azurerm"
+      command: "destroy"
+      environmentServiceNameAzureRM: "azureworkshop23-terraformworkshop23-9335ca06-fa05-429d-aed9-ba3fe3157e97"
